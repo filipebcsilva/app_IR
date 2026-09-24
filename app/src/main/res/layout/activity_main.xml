@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/salario_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/salario_edit"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/salario_text"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/salario_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/salario_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salario_edit"
+        app:layout_constraintBottom_toTopOf="@id/gastos_edit">
+    </TextView>
+
+    <EditText
+        android:id="@+id/gastos_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/gastos_edit"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salario_text"
+        app:layout_constraintBottom_toTopOf="@id/gastos_text">
+    </EditText>
+
+    <TextView
+        android:id="@+id/gastos_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/gastos_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gastos_edit"
+        app:layout_constraintBottom_toTopOf="@id/dependente_edit">
+    </TextView>
+
+    <EditText
+        android:id="@+id/dependente_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/dependente_edit"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gastos_text"
+        app:layout_constraintBottom_toTopOf="@id/dependente_text">
+    </EditText>
+
+    <TextView
+        android:id="@+id/dependente_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/dependente_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dependente_edit"
+        app:layout_constraintBottom_toTopOf="@id/imposto_text">
+    </TextView>
+
+    <TextView
+        android:id="@+id/imposto_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp"
+        android:text="@string/imposto_mensal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dependente_text"
+        app:layout_constraintBottom_toTopOf="@id/imposto_view">
+    </TextView>
+
+    <TextView
+        android:id="@+id/imposto_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textSize="60sp"
+        android:textColor="@color/blue"
+        android:text="@string/imposto_inicial"
+        app:layout_constraintStart_toEndOf="@id/imposto_rs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imposto_text"
+        app:layout_constraintBottom_toTopOf="@id/calcular_button">
+    </TextView>
+
+    <TextView
+        android:id="@+id/imposto_rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textSize="60sp"
+        android:textColor="@color/blue"
+        android:text="@string/imposto_rs"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imposto_view"
+        app:layout_constraintTop_toTopOf="@id/imposto_view">
+    </TextView>
+
+    <Button
+        android:id="@+id/calcular_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="@string/calcular_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imposto_view"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">calculadoraImposto</string>
+    <string name="salario_edit">Salario (R$)</string>
+    <string name="salario_text">Salario Mensal</string>
+    <string name="gastos_edit">Gastos (R$)</string>
+    <string name="gastos_text">Gastos com saúde e educação</string>
+    <string name="dependente_edit">Dependentes</string>
+    <string name="dependente_text">N° de dependentes</string>
+    <string name="imposto_mensal">SEU IMPORTO DE RENDA MENSAL É:</string>
+    <string name="calcular_button">Calcular</string>
+    <string name="imposto_inicial">0</string>
+    <string name="imposto_rs">R$</string>
+</resources>
